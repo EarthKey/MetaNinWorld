@@ -5,96 +5,144 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>参加方法・FAQ｜にんだおメタバーススタンプラリー</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cyber-blue': '#4361EE',
+            'cyber-purple': '#7209B7',
+            'cyber-pink': '#F72585',
+            'cyber-teal': '#4CC9F0',
+            'cyber-dark': '#0B0E2D',
+          },
+          boxShadow: {
+            'neon-blue': '0 0 5px #4361EE, 0 0 15px #4361EE',
+            'neon-purple': '0 0 5px #7209B7, 0 0 15px #7209B7',
+            'neon-pink': '0 0 5px #F72585, 0 0 15px #F72585',
+            'neon-teal': '0 0 5px #4CC9F0, 0 0 15px #4CC9F0',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-metaverse {
+      background: linear-gradient(135deg, #0B0E2D 0%, #1A1B4B 40%, #3A0CA3 100%);
+    }
+    .bg-metaverse-light {
+      background: linear-gradient(135deg, #4361EE 0%, #7209B7 50%, #F72585 100%);
+    }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(76, 201, 240, 0.6);
+    }
+    .hover-float:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+    .card-3d {
+      transform: perspective(1000px) rotateX(2deg);
+      transition: all 0.3s ease;
+    }
+    .card-3d:hover {
+      transform: perspective(1000px) rotateX(0deg) rotateY(2deg);
+    }
+    .grid-pattern {
+      background-image: linear-gradient(rgba(76, 201, 240, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(76, 201, 240, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
 </head>
 
-<body class="bg-slate-50 text-gray-900 scroll-smooth">
+<body class="bg-metaverse text-gray-100 scroll-smooth grid-pattern">
   <!-- 🧭 NAVIGATION -->
-  <nav class="bg-white shadow-sm py-4 px-6">
-    <div class="max-w-5xl mx-auto flex justify-center space-x-6 text-sm md:text-base">
-      <a href="index.html" class="hover:underline">トップ</a>
-      <a href="platforms.html" class="hover:underline">プラットフォーム</a>
-      <a href="howto.html" class="font-medium text-indigo-600 hover:underline">参加方法</a>
-      <a href="photos.html" class="hover:underline">フォトスポット</a>
-      <a href="guides.html" class="hover:underline">始め方ガイド</a>
-      <a href="contact.html" class="hover:underline">お問い合わせ</a>
+  <nav class="bg-cyber-dark bg-opacity-70 backdrop-blur-md py-4 px-6 border-b border-cyber-teal shadow-neon-teal sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex justify-center space-x-8 text-sm md:text-base">
+      <a href="index.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">トップ</a>
+      <a href="platforms.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">プラットフォーム</a>
+      <a href="howto.html" class="font-medium text-white shadow-neon-blue transition-all duration-300 hover-float">参加方法</a>
+      <a href="photos.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">フォトスポット</a>
+      <a href="guides.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">始め方ガイド</a>
+      <a href="contact.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">お問い合わせ</a>
     </div>
   </nav>
 
   <!-- 📝 HOW TO JOIN -->
-  <section class="max-w-4xl mx-auto px-6 py-16">
-    <h1 class="text-4xl font-bold mb-8 text-center">参加方法</h1>
+  <section class="py-16 max-w-4xl mx-auto px-6 relative">
+    <div class="absolute inset-0 bg-cyber-blue opacity-5 rounded-3xl blur-3xl -z-10"></div>
+    <h1 class="text-4xl font-bold mb-8 text-center text-white text-glow">参加方法</h1>
     <p class="text-lg text-center mb-12 max-w-3xl mx-auto">
       メタ忍ワールドのスタンプラリーに参加して、<em>CNGトークン</em>や限定アイテムを手に入れよう！
     </p>
 
-    <div class="bg-white rounded-xl shadow-md p-8 mb-12">
-      <ol class="list-decimal list-inside space-y-6 leading-relaxed">
-        <li class="pb-6 border-b border-gray-100">
-          <h3 class="text-xl font-bold mb-2">各ワールドへ入室</h3>
+    <div class="bg-cyber-dark bg-opacity-70 backdrop-blur-md rounded-xl border border-cyber-teal shadow-neon-teal p-8">
+      <ol class="mt-8 space-y-10 list-decimal pl-6">
+        <li class="py-6 border-b border-cyber-teal border-opacity-30">
+          <h3 class="text-xl font-bold mb-4 text-cyber-teal text-glow">スタンプラリー・ミッション（必須）</h3>
           <p>
-            <a href="platforms.html" class="text-indigo-600 hover:underline">プラットフォーム一覧</a>から各メタバースの公式URLにアクセスし、ウォレットまたはSNSアカウントでログインします。初めて利用する方は、各プラットフォームの案内に従ってアカウントを作成してください。
+            <a href="platforms.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300">プラットフォーム一覧</a>から各メタバースの公式URLにアクセスし、ウォレットまたはSNSアカウントでログインします。初めて利用する方は、各プラットフォームの案内に従ってアカウントを作成してください。
           </p>
-          <div class="mt-3 bg-indigo-50 p-4 rounded-lg">
-            <p class="text-sm text-indigo-800">
+          <div class="mt-3 bg-cyber-dark bg-opacity-50 p-4 rounded-lg flex items-center border border-cyber-blue shadow-neon-blue card-3d">
+            <p class="text-sm text-cyber-blue">
               <strong>ヒント：</strong> Sandbox、Rium、clusterなど複数のプラットフォームを利用するため、事前にアカウント登録しておくとスムーズです。
             </p>
           </div>
           <div class="mt-6">
-            <a href="guides.html" class="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition">
+            <a href="guides.html" class="inline-block px-6 py-3 bg-cyber-blue hover:bg-cyber-purple text-white font-semibold rounded-lg shadow-neon-blue hover:shadow-neon-purple transition-all duration-300 hover-float">
               プラットフォームへのインストール方法などはコチラ
             </a>
           </div>
         </li>
         
-        <li class="py-6 border-b border-gray-100">
-          <h3 class="text-xl font-bold mb-2">フォトスポットでスクショ📸</h3>
+        <li class="py-6 border-b border-cyber-purple border-opacity-30">
+          <h3 class="text-xl font-bold mb-4 text-cyber-purple text-glow">フォトスポットでスクショ📸</h3>
           <div class="md:flex md:items-start md:space-x-6">
             <img src="img/stamp1.png" alt="フォトスポット投稿例（スタンプ1）" class="w-64 md:w-80 mb-4 md:mb-0 rounded-lg shadow">
             <p class="flex-1 text-lg md:text-xl whitespace-normal">
               ① スタンプラリー・ミッション（必須）：全メタ忍ワールドを巡ること &amp; 各フォトスポットで記念撮影（スクショ）すること → 指定ハッシュタグ（#メタ忍ワールド #クリプトニンジャ咲耶）付きでX投稿 ※投稿時は、他の参加者や第三者の個人情報（個人が特定できるものなど）が写り込まないようご注意ください。
             </p>
           </div>
-          <div class="mt-3 bg-purple-50 p-4 rounded-lg flex items-center">
-            <div class="text-purple-800 font-mono">
+          <div class="mt-3 bg-cyber-dark bg-opacity-50 p-4 rounded-lg flex items-center border border-cyber-purple shadow-neon-purple card-3d">
+            <div class="text-cyber-purple font-mono">
               #メタ忍ワールド #クリプトニンジャ咲耶
             </div>
           </div>
         </li>
         
-        <li class="py-6 border-b border-gray-100">
-          <h3 class="text-xl font-bold mb-2">＋α「冒険ログ」ミッション</h3>
+        <li class="py-6 border-b border-cyber-pink border-opacity-30">
+          <h3 class="text-xl font-bold mb-4 text-cyber-pink text-glow">＋α「冒険ログ」ミッション</h3>
           <div class="md:flex md:items-start md:space-x-6">
             <img src="img/stamp2b.png" alt="冒険ログ投稿例（スタンプ2）" class="w-64 md:w-80 mb-4 md:mb-0 rounded-lg shadow">
             <p class="flex-1 text-lg md:text-xl whitespace-normal">
               ② 冒険ログ・ミッション（任意）：全角 400〜1,400 字の「冒険ログ」を 指定ハッシュタグ（#冒険ログ #クリプトニンジャ咲耶）付きでX投稿。内容は自由です。例：印象に残った場面、出会った人、操作に苦労した点、ショートストーリーなど。※体験を 3 分以内のオリジナル動画・楽曲にまとめ、音源の URL を添えて投稿する形でも参加できます。AI 使用可。冒険ログのみの参加はできません。冒険ログは複数投稿いただけますが、申請フォームには代表作 1 点のみご記入ください。
             </p>
           </div>
-          <div class="mt-3 bg-amber-50 p-4 rounded-lg flex items-center">
-            <div class="text-amber-800 font-mono">
+          <div class="mt-3 bg-cyber-dark bg-opacity-50 p-4 rounded-lg flex items-center border border-cyber-pink shadow-neon-pink card-3d">
+            <div class="text-cyber-pink font-mono">
               #冒険ログ #クリプトニンジャ咲耶
             </div>
           </div>
         </li>
         
-        <li class="py-6 border-b border-gray-100">
-          <h3 class="text-xl font-bold mb-2">７ワールド制覇で報酬GET</h3>
+        <li class="py-6 border-b border-cyber-teal border-opacity-30">
+          <h3 class="text-xl font-bold mb-4 text-cyber-teal text-glow">７ワールド制覇で報酬GET</h3>
           <p>
             全7ワールドのフォトスポットでの撮影のミッションの投稿が完了、「冒険ログ」ミッション（任意）の投稿が完了したら、7&nbsp;月&nbsp;19&nbsp;日（土）以降に投稿URLをGoogleフォームに記入して提出します。確認後、スタンプラリーミッションのCNGトークンが配布されます。
           </p>
           <div class="mt-4">
-            <a href="https://forms.gle/XXXXXXX" target="_blank" rel="noopener" class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md transition">
+            <a href="https://forms.gle/XXXXXXX" target="_blank" rel="noopener" class="inline-block px-6 py-3 bg-cyber-purple hover:bg-cyber-pink text-white font-semibold rounded-lg shadow-neon-purple hover:shadow-neon-pink transition-all duration-300 hover-float">
               参加登録フォームへ
             </a>
           </div>
-          <div class="mt-6 bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-lg text-sm leading-relaxed">
-            <h4 class="font-semibold mb-2">申請フォーム（Google フォーム）提出要件</h4>
+          <div class="mt-6 bg-cyber-dark bg-opacity-50 border border-cyber-teal p-4 rounded-lg text-sm leading-relaxed shadow-neon-teal card-3d">
+            <h4 class="font-semibold mb-2 text-cyber-teal">申請フォーム（Google フォーム）提出要件</h4>
             <ul class="list-disc pl-5 space-y-1">
-              <li><strong>提出期間：</strong>7&nbsp;月&nbsp;19&nbsp;日（土）0:00 JST 〜 7&nbsp;月&nbsp;23&nbsp;日（水）23:59 JST（5&nbsp;日間）</li>
-              <li><strong class="text-indigo-700">【全員必須】</strong>：各投稿 URL、FiNANCiE ユーザー名 など</li>
-              <li><strong class="text-indigo-700">【冒険ログで CNP を希望する方のみ必須】</strong>：ウォレットアドレス</li>
-              <li><strong class="text-indigo-700">【冒険ログでリアルグッズを希望する方のみ必須】</strong>：住所</li>
-              <li><strong class="text-indigo-700">※申請フォームでの報告はお一人様 1 回限りです。複数回申請された場合は最新の内容のみを有効とします。</strong></li>
-              <li><strong class="text-indigo-700">※FiNANCiE ユーザー名を未入力の場合、CNG トークンは受け取れません。</strong></li>
+              <li><strong class="text-cyber-teal">【全員必須】</strong>：各投稿 URL、FiNANCiE ユーザー名 など</li>
+              <li><strong class="text-cyber-teal">【冒険ログで CNP を希望する方のみ必須】</strong>：ウォレットアドレス</li>
+              <li><strong class="text-cyber-teal">【冒険ログでリアルグッズを希望する方のみ必須】</strong>：住所</li>
+              <li><strong class="text-cyber-teal">※申請フォームでの報告はお一人様 1 回限りです。複数回申請された場合は最新の内容のみを有効とします。</strong></li>
+              <li><strong class="text-cyber-teal">※FiNANCiE ユーザー名を未入力の場合、CNG トークンは受け取れません。</strong></li>
             </ul>
             <p class="mt-2 text-xs text-gray-700">※ ①（スタンプラリー・ミッション）と ②（冒険ログ・ミッション）の成果を<strong>セット</strong>で報告してください。②のみの申請はできません。</p>
             <p class="mt-1 text-xs text-gray-700">※ 申請フォームの段階ではウォレットアドレスや住所のご提供自体は不要です。当選された場合にご連絡し、必要事項をお伺いします。</p>
@@ -109,23 +157,23 @@
 
     <!-- CTA -->
     <div class="mt-16 text-center">
-      <h2 class="text-2xl font-bold mb-4">準備はいいですか？</h2>
-      <p class="mb-6">メタ忍７ワールドの冒険があなたを待っています！</p>
-      <a href="platforms.html" class="inline-block px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full shadow-lg transition">
+      <h2 class="text-3xl font-bold mb-4 text-white text-glow">準備はいいですか？</h2>
+      <p class="mb-8 text-cyber-teal">メタ忍７ワールドの冒険があなたを待っています！</p>
+      <a href="platforms.html" class="inline-block px-10 py-5 bg-metaverse-light hover:bg-cyber-purple text-white font-semibold rounded-full shadow-neon-blue hover:shadow-neon-purple transition-all duration-300 hover-float">
         プラットフォームを確認する
       </a>
     </div>
   </section>
 
   <!-- 👣 FOOTER -->
-  <footer class="bg-slate-900 text-slate-300 py-8 text-center text-sm">
+  <footer class="bg-cyber-dark border-t border-cyber-teal text-cyber-teal py-8 text-center text-sm">
     <nav class="mb-4">
-      <a href="index.html" class="mx-3 hover:underline">トップ</a>
-      <a href="platforms.html" class="mx-3 hover:underline">プラットフォーム</a>
-      <a href="howto.html" class="mx-3 hover:underline">参加方法</a>
-      <a href="photos.html" class="mx-3 hover:underline">フォトスポット</a>
-      <a href="guides.html" class="mx-3 hover:underline">始め方ガイド</a>
-      <a href="contact.html" class="mx-3 hover:underline">お問い合わせ</a>
+      <a href="index.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">トップ</a>
+      <a href="platforms.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">プラットフォーム</a>
+      <a href="howto.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">参加方法</a>
+      <a href="photos.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">フォトスポット</a>
+      <a href="guides.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">始め方ガイド</a>
+      <a href="contact.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">お問い合わせ</a>
     </nav>
   </footer>
 </body>
