@@ -5,18 +5,66 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>にんだおメタバーススタンプラリー〜メタ忍７ワールド大冒険〜</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cyber-blue': '#4361EE',
+            'cyber-purple': '#7209B7',
+            'cyber-pink': '#F72585',
+            'cyber-teal': '#4CC9F0',
+            'cyber-dark': '#0B0E2D',
+          },
+          boxShadow: {
+            'neon-blue': '0 0 5px #4361EE, 0 0 15px #4361EE',
+            'neon-purple': '0 0 5px #7209B7, 0 0 15px #7209B7',
+            'neon-pink': '0 0 5px #F72585, 0 0 15px #F72585',
+            'neon-teal': '0 0 5px #4CC9F0, 0 0 15px #4CC9F0',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-metaverse {
+      background: linear-gradient(135deg, #0B0E2D 0%, #1A1B4B 40%, #3A0CA3 100%);
+    }
+    .bg-metaverse-light {
+      background: linear-gradient(135deg, #4361EE 0%, #7209B7 50%, #F72585 100%);
+    }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(76, 201, 240, 0.6);
+    }
+    .hover-float:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+    .card-3d {
+      transform: perspective(1000px) rotateX(2deg);
+      transition: all 0.3s ease;
+    }
+    .card-3d:hover {
+      transform: perspective(1000px) rotateX(0deg) rotateY(2deg);
+    }
+    .grid-pattern {
+      background-image: linear-gradient(rgba(76, 201, 240, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(76, 201, 240, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
 </head>
 
-<body class="bg-slate-50 text-gray-900 scroll-smooth">
+<body class="bg-metaverse text-gray-100 scroll-smooth grid-pattern">
   <!-- 🧭 NAVIGATION -->
-  <nav class="bg-white shadow-sm py-4 px-6">
-    <div class="max-w-5xl mx-auto flex justify-center space-x-6 text-sm md:text-base">
-      <a href="index.html" class="font-medium text-indigo-600 hover:underline">トップ</a>
-      <a href="platforms.html" class="hover:underline">プラットフォーム</a>
-      <a href="howto.html" class="hover:underline">参加方法</a>
-      <a href="photos.html" class="hover:underline">フォトスポット</a>
-      <a href="guides.html" class="hover:underline">始め方ガイド</a>
-      <a href="contact.html" class="hover:underline">お問い合わせ</a>
+  <nav class="bg-cyber-dark bg-opacity-70 backdrop-blur-md py-4 px-6 border-b border-cyber-teal shadow-neon-teal sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex justify-center space-x-8 text-sm md:text-base">
+      <a href="index.html" class="font-medium text-white shadow-neon-blue transition-all duration-300 hover-float">トップ</a>
+      <a href="platforms.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">プラットフォーム</a>
+      <a href="howto.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">参加方法</a>
+      <a href="photos.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">フォトスポット</a>
+      <a href="guides.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">始め方ガイド</a>
+      <a href="contact.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">お問い合わせ</a>
     </div>
   </nav>
 
@@ -24,26 +72,41 @@
   <img src="img/TOP.png" alt="メタ忍ワールド キービジュアル" class="w-full object-cover">
 
   <!-- 🏷 HERO -->
-  <header class="relative bg-gradient-to-br from-purple-600 via-indigo-600 to-teal-500 py-20 text-center text-white">
-    <h1 class="text-3xl md:text-5xl font-bold drop-shadow-lg leading-relaxed">にんだおメタバーススタンプラリー<br class="md:hidden">〜メタ忍７ワールド大冒険〜</h1>
-    <p class="mt-4 text-lg md:text-2xl">メタ忍７ワールド大冒険へ、いざ出発！</p>
-    <p class="mt-6 text-base md:text-lg font-semibold tracking-wide">
-      開催期間：2025&nbsp;年&nbsp;6&nbsp;月&nbsp;21&nbsp;日（土）〜7&nbsp;月&nbsp;18&nbsp;日（金）
-    </p>
+  <header class="py-20 bg-metaverse-light text-white text-center relative overflow-hidden">
+    <div class="absolute inset-0 grid-pattern opacity-20"></div>
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-glow">にんだおメタバーススタンプラリー<br class="md:hidden">〜メタ忍７ワールド大冒険〜</h1>
+      <p class="mt-4 text-lg md:text-2xl">メタ忍７ワールド大冒険へ、いざ出発！</p>
+      <p class="mt-6 text-base md:text-lg font-semibold tracking-wide">
+        開催期間：2025&nbsp;年&nbsp;6&nbsp;月&nbsp;21&nbsp;日（土）〜7&nbsp;月&nbsp;18&nbsp;日（金）
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="howto.html" class="px-8 py-3 bg-cyber-dark text-cyber-teal rounded-full font-semibold shadow-neon-teal hover:text-white hover:shadow-neon-blue transition-all duration-300 hover-float">
+          参加方法を確認する
+        </a>
+        <a href="platforms.html" class="px-8 py-3 bg-cyber-dark bg-opacity-70 text-cyber-purple rounded-full font-semibold border border-cyber-purple shadow-neon-purple hover:text-white hover:shadow-neon-pink transition-all duration-300 hover-float">
+          参加プラットフォーム
+        </a>
+      </div>
+    </div>
   </header>
 
   <!-- 💡 ABOUT -->
-  <section id="about" class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold mb-4">メタ忍ワールドとは？</h2>
-    <p class="leading-relaxed">
-      「メタ忍ワールド」は、<strong>NinjaDAOコミュニティ</strong>に関連する多彩なメタバースワールドの総称です。CNP&nbsp;Land、NOAランド、クリプトニンジャ咲耶ワールド、クリプトニンジャ・オンライン、甲賀シティ、ニンジャ寺子屋、咲耶ポータルなど、個性あふれる<strong>7&nbsp;つのワールド</strong>で構成されており、各ワールドごとに独自の雰囲気や体験が楽しめます。そして、これらの中にはアニメ『忍ばない！クリプトニンジャ咲耶』の世界観をそのままメタバースに拡張したワールドも含まれています。
-    </p>
+  <section id="about" class="max-w-4xl mx-auto px-6 py-16 relative">
+    <div class="absolute inset-0 bg-cyber-blue opacity-5 rounded-3xl blur-3xl -z-10"></div>
+    <h2 class="text-3xl font-bold mb-8 text-center text-white text-glow">メタ忍ワールドとは？</h2>
+    <div class="bg-cyber-dark bg-opacity-70 backdrop-blur-md rounded-xl border border-cyber-teal shadow-neon-teal p-8 mb-12 card-3d">
+      <p class="leading-relaxed">
+        「メタ忍ワールド」は、<strong>NinjaDAOコミュニティ</strong>に関連する多彩なメタバースワールドの総称です。CNP&nbsp;Land、NOAランド、クリプトニンジャ咲耶ワールド、クリプトニンジャ・オンライン、甲賀シティ、ニンジャ寺子屋、咲耶ポータルなど、個性あふれる<strong>7&nbsp;つのワールド</strong>で構成されており、各ワールドごとに独自の雰囲気や体験が楽しめます。そして、これらの中にはアニメ『忍ばない！クリプトニンジャ咲耶』の世界観をそのままメタバースに拡張したワールドも含まれています。
+      </p>
+    </div>
   </section>
 
   <!-- 🗓 SCHEDULE -->
-  <section id="schedule" class="bg-slate-800 text-white py-16">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6">開催スケジュール</h2>
+  <section id="schedule" class="bg-cyber-dark bg-opacity-30 backdrop-blur-md relative">
+    <div class="absolute inset-0 grid-pattern opacity-10"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="text-3xl font-bold mb-8 text-white text-glow">開催スケジュール</h2>
       <ul class="space-y-3">
         <li><span class="font-semibold">スタンプラリー期間　</span><strong>6&nbsp;月&nbsp;21&nbsp;日（土）〜7&nbsp;月&nbsp;18&nbsp;日（金）</strong></li>
         <li><span class="font-semibold">申請フォーム提出期間　</span>7&nbsp;月&nbsp;19&nbsp;日（土）～&nbsp;7&nbsp;月&nbsp;23&nbsp;日（水）</li>
@@ -70,14 +133,14 @@
   </section>
 
   <!-- �👣 FOOTER -->
-  <footer class="bg-slate-900 text-slate-300 py-8 text-center text-sm">
+  <footer class="bg-cyber-dark border-t border-cyber-teal text-cyber-teal py-8 text-center text-sm">
     <nav class="mb-4">
-      <a href="index.html" class="mx-3 hover:underline">トップ</a>
-      <a href="platforms.html" class="mx-3 hover:underline">プラットフォーム</a>
-      <a href="howto.html" class="mx-3 hover:underline">参加方法</a>
-      <a href="photos.html" class="mx-3 hover:underline">フォトスポット</a>
-      <a href="guides.html" class="mx-3 hover:underline">始め方ガイド</a>
-      <a href="contact.html" class="mx-3 hover:underline">お問い合わせ</a>
+      <a href="index.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">トップ</a>
+      <a href="platforms.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">プラットフォーム</a>
+      <a href="howto.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">参加方法</a>
+      <a href="photos.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">フォトスポット</a>
+      <a href="guides.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">始め方ガイド</a>
+      <a href="contact.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">お問い合わせ</a>
     </nav>
   </footer>
 </body>

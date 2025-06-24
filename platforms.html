@@ -5,132 +5,195 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>参加プラットフォーム｜にんだおメタバーススタンプラリー</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cyber-blue': '#4361EE',
+            'cyber-purple': '#7209B7',
+            'cyber-pink': '#F72585',
+            'cyber-teal': '#4CC9F0',
+            'cyber-dark': '#0B0E2D',
+          },
+          boxShadow: {
+            'neon-blue': '0 0 5px #4361EE, 0 0 15px #4361EE',
+            'neon-purple': '0 0 5px #7209B7, 0 0 15px #7209B7',
+            'neon-pink': '0 0 5px #F72585, 0 0 15px #F72585',
+            'neon-teal': '0 0 5px #4CC9F0, 0 0 15px #4CC9F0',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-metaverse {
+      background: linear-gradient(135deg, #0B0E2D 0%, #1A1B4B 40%, #3A0CA3 100%);
+    }
+    .bg-metaverse-light {
+      background: linear-gradient(135deg, #4361EE 0%, #7209B7 50%, #F72585 100%);
+    }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(76, 201, 240, 0.6);
+    }
+    .hover-float:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+    .card-3d {
+      transform: perspective(1000px) rotateX(2deg);
+      transition: all 0.3s ease;
+    }
+    .card-3d:hover {
+      transform: perspective(1000px) rotateX(0deg) rotateY(2deg);
+    }
+    .grid-pattern {
+      background-image: linear-gradient(rgba(76, 201, 240, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(76, 201, 240, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
 </head>
 
-<body class="bg-slate-50 text-gray-900 scroll-smooth">
+<body class="bg-metaverse text-gray-100 scroll-smooth grid-pattern">
   <!-- 🧭 NAVIGATION -->
-  <nav class="bg-white shadow-sm py-4 px-6">
-    <div class="max-w-5xl mx-auto flex justify-center space-x-6 text-sm md:text-base">
-      <a href="index.html" class="hover:underline">トップ</a>
-      <a href="platforms.html" class="font-medium text-indigo-600 hover:underline">プラットフォーム</a>
-      <a href="howto.html" class="hover:underline">参加方法</a>
-      <a href="photos.html" class="hover:underline">フォトスポット</a>
-      <a href="guides.html" class="hover:underline">始め方ガイド</a>
-      <a href="contact.html" class="hover:underline">お問い合わせ</a>
+  <nav class="bg-cyber-dark bg-opacity-70 backdrop-blur-md py-4 px-6 border-b border-cyber-teal shadow-neon-teal sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex justify-center space-x-8 text-sm md:text-base">
+      <a href="index.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">トップ</a>
+      <a href="platforms.html" class="font-medium text-white shadow-neon-blue transition-all duration-300 hover-float">プラットフォーム</a>
+      <a href="howto.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">参加方法</a>
+      <a href="photos.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">フォトスポット</a>
+      <a href="guides.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">始め方ガイド</a>
+      <a href="contact.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">お問い合わせ</a>
     </div>
   </nav>
 
   <!-- 🌐 PLATFORMS -->
-  <section id="worlds" class="py-16">
+  <section id="worlds" class="py-16 relative">
+    <div class="absolute inset-0 bg-cyber-blue opacity-5 rounded-3xl blur-3xl -z-10"></div>
     <div class="max-w-5xl mx-auto px-6">
-      <h1 class="text-4xl font-bold mb-8 text-center">参加プラットフォーム一覧</h1>
-      <p class="text-lg text-center mb-12 max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold mb-8 text-center text-white text-glow">参加プラットフォーム一覧</h1>
+      <p class="text-lg text-center mb-12 max-w-3xl mx-auto text-cyber-teal">
         ７つのメタバースプラットフォームで展開される「メタ忍ワールド」。<br>
         各ワールドのフォトスポットを巡って、スタンプラリーに参加しよう！
       </p>
 
       <div class="grid md:grid-cols-2 gap-8">
         <!-- CNP Land -->
-        <a href="https://www.sandbox.game/ja/experiences/cnp-land-cryptoninja-partners/f9e550c8-3dea-44c1-98ca-6c78f2d840b7/page/" target="_blank" rel="noopener" class="block transition transform hover:-translate-y-1 hover:shadow-lg">
-          <div class="rounded-lg overflow-hidden shadow bg-white">
+        <a href="https://www.sandbox.game/ja/experiences/cnp-land-cryptoninja-partners/f9e550c8-3dea-44c1-98ca-6c78f2d840b7/page/" target="_blank" rel="noopener" class="block transition-all duration-300 hover-float">
+          <div class="rounded-lg overflow-hidden shadow-neon-blue bg-cyber-dark bg-opacity-70 backdrop-blur-md border border-cyber-blue card-3d">
             <div class="h-48 bg-slate-200 overflow-hidden">
               <img src="img/Red-image1.png" alt="CNP Land" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold">CNP Land</h3>
+              <h3 class="text-xl font-bold text-cyber-blue text-glow">CNP Land</h3>
               <p class="mt-2 text-gray-600">The&nbsp;Sandbox</p>
               <p class="mt-3">CNP Landは「The Sandbox」で遊べる忍者のテーマパーク。各エリアのメインクエストや巻物集め、ミニゲームなどを遊びながら、CryptoNinjaの世界を体験できます。</p>
-              <div class="mt-4 text-indigo-600 font-medium">ワールドへアクセス →</div>
+              <div class="mt-4 inline-block px-4 py-2 bg-cyber-blue text-white rounded-lg shadow-neon-blue">
+                ワールドへアクセス →
+              </div>
             </div>
           </div>
         </a>
 
         <!-- NOAランド -->
-        <a href="https://www.sandbox.game/ja/experiences/noa-land/349f827e-77eb-4ea9-9d9a-c55d80fb3075/page/" target="_blank" rel="noopener" class="block transition transform hover:-translate-y-1 hover:shadow-lg">
-          <div class="rounded-lg overflow-hidden shadow bg-white">
+        <a href="https://www.sandbox.game/ja/experiences/noa-land/349f827e-77eb-4ea9-9d9a-c55d80fb3075/page/" target="_blank" rel="noopener" class="block transition-all duration-300 hover-float">
+          <div class="rounded-lg overflow-hidden shadow-neon-purple bg-cyber-dark bg-opacity-70 backdrop-blur-md border border-cyber-purple card-3d">
             <div class="h-48 bg-slate-200 overflow-hidden">
               <img src="img/Red-image2.png" alt="NOAランド" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold">NOAランド</h3>
+              <h3 class="text-xl font-bold text-cyber-purple text-glow">NOAランド</h3>
               <p class="mt-2 text-gray-600">The&nbsp;Sandbox</p>
               <p class="mt-3">原作者あけじーさんのマンガ作品「NOA」のキャラクターたちをより身近に感じることができる、ファン（お寿司職人さん）制作のゲームです</p>
-              <div class="mt-4 text-indigo-600 font-medium">ワールドへアクセス →</div>
+              <div class="mt-4 inline-block px-4 py-2 bg-cyber-purple text-white rounded-lg shadow-neon-purple">
+                ワールドへアクセス →
+              </div>
             </div>
           </div>
         </a>
 
         <!-- クリプトニンジャ咲耶ワールド -->
-        <a href="https://www.sandbox.game/ja/experiences/CryptoNinja%20SAKUYA%20World/88025d6e-8a1c-47e5-a5dc-879a70785b3b/page/" target="_blank" rel="noopener" class="block transition transform hover:-translate-y-1 hover:shadow-lg">
-          <div class="rounded-lg overflow-hidden shadow bg-white">
+        <a href="https://www.sandbox.game/ja/experiences/CryptoNinja%20SAKUYA%20World/88025d6e-8a1c-47e5-a5dc-879a70785b3b/page/" target="_blank" rel="noopener" class="block transition-all duration-300 hover-float">
+          <div class="rounded-lg overflow-hidden shadow-neon-pink bg-cyber-dark bg-opacity-70 backdrop-blur-md border border-cyber-pink card-3d">
             <div class="h-48 bg-slate-200 overflow-hidden">
               <img src="img/Red-image3.jpg" alt="クリプトニンジャ咲耶ワールド" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold">クリプトニンジャ咲耶ワールド</h3>
+              <h3 class="text-xl font-bold text-cyber-pink text-glow">クリプトニンジャ咲耶ワールド</h3>
               <p class="mt-2 text-gray-600">The&nbsp;Sandbox</p>
-              <p class="mt-3">アニメ「忍ばないクリプトニンジャ咲耶」の世界を再現！色鮮やかなパルクールステージを駆け抜け、クリプト絵巻を集めよう。シノビマートや地下鉄も体験でき、戦闘なしで子供も安心して楽しめる美しいワールドです。</p>
-              <div class="mt-4 text-indigo-600 font-medium">ワールドへアクセス →</div>
+              <p class="mt-3">アニメ「忍ばないクリプトニンジャ咲耶」の世界を再現！色鮮やかなパルクールステージを駆け抜け、クリプト絵巻を集めよう。シノビマートや地下鉄も体験でき、戦闘なしで子供も大人も一緒に学びやイベントに参加できます。</p>
+              <div class="mt-4 inline-block px-4 py-2 bg-cyber-pink text-white rounded-lg shadow-neon-pink">
+                ワールドへアクセス →
+              </div>
             </div>
           </div>
         </a>
 
         <!-- クリプトニンジャ・オンライン -->
-        <a href="https://rium.io/cryptoninja-online" target="_blank" rel="noopener" class="block transition transform hover:-translate-y-1 hover:shadow-lg">
-          <div class="rounded-lg overflow-hidden shadow bg-white">
+        <a href="https://rium.io/cryptoninja-online" target="_blank" rel="noopener" class="block transition-all duration-300 hover-float">
+          <div class="rounded-lg overflow-hidden shadow-neon-teal bg-cyber-dark bg-opacity-70 backdrop-blur-md border border-cyber-teal card-3d">
             <div class="h-48 bg-slate-200 overflow-hidden">
               <img src="img/Red-image4.png" alt="クリプトニンジャ・オンライン" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold">クリプトニンジャ・オンライン</h3>
+              <h3 class="text-xl font-bold text-cyber-teal text-glow">クリプトニンジャ・オンライン</h3>
               <p class="mt-2 text-gray-600">Rium</p>
               <p class="mt-3">忍術バトルやミニゲームが楽しめるインタラクティブなゲーム空間。</p>
-              <div class="mt-4 text-indigo-600 font-medium">ワールドへアクセス →</div>
+              <div class="mt-4 inline-block px-4 py-2 bg-cyber-teal text-white rounded-lg shadow-neon-teal">
+                ワールドへアクセス →
+              </div>
             </div>
           </div>
         </a>
 
         <!-- 甲賀シティ -->
-        <a href="https://rium.io/cryptoninja-online" target="_blank" rel="noopener" class="block transition transform hover:-translate-y-1 hover:shadow-lg">
-          <div class="rounded-lg overflow-hidden shadow bg-white">
+        <a href="https://rium.io/cryptoninja-online" target="_blank" rel="noopener" class="block transition-all duration-300 hover-float">
+          <div class="rounded-lg overflow-hidden shadow-neon-blue bg-cyber-dark bg-opacity-70 backdrop-blur-md border border-cyber-blue card-3d">
             <div class="h-48 bg-slate-200 overflow-hidden">
               <img src="img/Red-image5.png" alt="甲賀シティ" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold">甲賀シティ</h3>
+              <h3 class="text-xl font-bold text-cyber-blue text-glow">甲賀シティ</h3>
               <p class="mt-2 text-gray-600">Rium</p>
               <p class="mt-3">現代と伝統が融合した架空の忍者都市。ショップやカフェなど様々な施設が点在。</p>
-              <div class="mt-4 text-indigo-600 font-medium">ワールドへアクセス →</div>
+              <div class="mt-4 inline-block px-4 py-2 bg-cyber-blue text-white rounded-lg shadow-neon-blue">
+                ワールドへアクセス →
+              </div>
             </div>
           </div>
         </a>
 
         <!-- ニンジャ寺子屋 -->
-        <a href="https://cluster.mu/w/abb7900a-541a-43d0-a17a-0bb3c8b74aa5" target="_blank" rel="noopener" class="block transition transform hover:-translate-y-1 hover:shadow-lg">
-          <div class="rounded-lg overflow-hidden shadow bg-white">
+        <a href="https://cluster.mu/w/abb7900a-541a-43d0-a17a-0bb3c8b74aa5" target="_blank" rel="noopener" class="block transition-all duration-300 hover-float">
+          <div class="rounded-lg overflow-hidden shadow-neon-purple bg-cyber-dark bg-opacity-70 backdrop-blur-md border border-cyber-purple card-3d">
             <div class="h-48 bg-slate-200 overflow-hidden">
               <img src="img/Red-image6.png" alt="ニンジャ寺子屋" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold">ニンジャ寺子屋</h3>
+              <h3 class="text-xl font-bold text-cyber-purple text-glow">ニンジャ寺子屋</h3>
               <p class="mt-2 text-gray-600">cluster</p>
               <p class="mt-3">ニンジャ寺子屋ワールドは、自由な学びを楽しめるメタバースの学校。校舎裏の大観覧車にアバターで乗れる体験が目玉で、子どもも大人も一緒に学びやイベントに参加できます。</p>
-              <div class="mt-4 text-indigo-600 font-medium">ワールドへアクセス →</div>
+              <div class="mt-4 inline-block px-4 py-2 bg-cyber-purple text-white rounded-lg shadow-neon-purple">
+                ワールドへアクセス →
+              </div>
             </div>
           </div>
         </a>
 
         <!-- 咲耶ポータル -->
-        <a href="https://www.spatial.io/s/Xiao-Ye-potaru-SAKUYA-PORTAL-on-Spatial-68065a3b1ef8cfb3d63aa817?share=3027" target="_blank" rel="noopener" class="block md:col-span-2 transition transform hover:-translate-y-1 hover:shadow-lg">
-          <div class="rounded-lg overflow-hidden shadow bg-white">
+        <a href="https://www.spatial.io/s/Xiao-Ye-potaru-SAKUYA-PORTAL-on-Spatial-68065a3b1ef8cfb3d63aa817?share=3027" target="_blank" rel="noopener" class="block transition-all duration-300 hover-float">
+          <div class="rounded-lg overflow-hidden shadow-neon-pink bg-cyber-dark bg-opacity-70 backdrop-blur-md border border-cyber-pink card-3d">
             <div class="h-48 bg-slate-200 overflow-hidden">
               <img src="img/Red-image7.png" alt="咲耶ポータル" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold">咲耶ポータル</h3>
+              <h3 class="text-xl font-bold text-cyber-pink text-glow">咲耶ポータル</h3>
               <p class="mt-2 text-gray-600">Spatial</p>
               <p class="mt-3">アニメ「忍ばない！クリプトニンジャ咲耶」応援メタバースギャラリー、3Dホームページ。全てのメタ忍ワールドへのゲートウェイとなるHUBスペース。</p>
-              <div class="mt-4 text-indigo-600 font-medium">ワールドへアクセス →</div>
+              <div class="mt-4 inline-block px-4 py-2 bg-cyber-pink text-white rounded-lg shadow-neon-pink">
+                ワールドへアクセス →
+              </div>
             </div>
           </div>
         </a>
@@ -139,14 +202,14 @@
   </section>
 
   <!-- 👣 FOOTER -->
-  <footer class="bg-slate-900 text-slate-300 py-8 text-center text-sm">
+  <footer class="bg-cyber-dark border-t border-cyber-teal text-cyber-teal py-8 text-center text-sm">
     <nav class="mb-4">
-      <a href="index.html" class="mx-3 hover:underline">トップ</a>
-      <a href="platforms.html" class="mx-3 hover:underline">プラットフォーム</a>
-      <a href="howto.html" class="mx-3 hover:underline">参加方法</a>
-      <a href="photos.html" class="mx-3 hover:underline">フォトスポット</a>
-      <a href="guides.html" class="mx-3 hover:underline">始め方ガイド</a>
-      <a href="contact.html" class="mx-3 hover:underline">お問い合わせ</a>
+      <a href="index.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">トップ</a>
+      <a href="platforms.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">プラットフォーム</a>
+      <a href="howto.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">参加方法</a>
+      <a href="photos.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">フォトスポット</a>
+      <a href="guides.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">始め方ガイド</a>
+      <a href="contact.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">お問い合わせ</a>
     </nav>
   </footer>
 </body>

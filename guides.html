@@ -5,38 +5,87 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>プラットフォームの始め方｜にんだおメタバーススタンプラリー</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cyber-blue': '#4361EE',
+            'cyber-purple': '#7209B7',
+            'cyber-pink': '#F72585',
+            'cyber-teal': '#4CC9F0',
+            'cyber-dark': '#0B0E2D',
+          },
+          boxShadow: {
+            'neon-blue': '0 0 5px #4361EE, 0 0 15px #4361EE',
+            'neon-purple': '0 0 5px #7209B7, 0 0 15px #7209B7',
+            'neon-pink': '0 0 5px #F72585, 0 0 15px #F72585',
+            'neon-teal': '0 0 5px #4CC9F0, 0 0 15px #4CC9F0',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-metaverse {
+      background: linear-gradient(135deg, #0B0E2D 0%, #1A1B4B 40%, #3A0CA3 100%);
+    }
+    .bg-metaverse-light {
+      background: linear-gradient(135deg, #4361EE 0%, #7209B7 50%, #F72585 100%);
+    }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(76, 201, 240, 0.6);
+    }
+    .hover-float:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+    .card-3d {
+      transform: perspective(1000px) rotateX(2deg);
+      transition: all 0.3s ease;
+    }
+    .card-3d:hover {
+      transform: perspective(1000px) rotateX(0deg) rotateY(2deg);
+    }
+    .grid-pattern {
+      background-image: linear-gradient(rgba(76, 201, 240, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(76, 201, 240, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
 </head>
 
-<body class="bg-slate-50 text-gray-900 scroll-smooth">
+<body class="bg-metaverse text-gray-100 scroll-smooth grid-pattern">
   <!-- 🧭 NAVIGATION -->
-  <nav class="bg-white shadow-sm py-4 px-6">
-    <div class="max-w-5xl mx-auto flex justify-center space-x-6 text-sm md:text-base">
-      <a href="index.html" class="hover:underline">トップ</a>
-      <a href="platforms.html" class="hover:underline">プラットフォーム</a>
-      <a href="howto.html" class="hover:underline">参加方法</a>
-      <a href="photos.html" class="hover:underline">フォトスポット</a>
-      <a href="guides.html" class="font-medium text-indigo-600 hover:underline">始め方ガイド</a>
-      <a href="contact.html" class="hover:underline">お問い合わせ</a>
+  <nav class="bg-cyber-dark bg-opacity-70 backdrop-blur-md py-4 px-6 border-b border-cyber-teal shadow-neon-teal sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex justify-center space-x-8 text-sm md:text-base">
+      <a href="index.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">トップ</a>
+      <a href="platforms.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">プラットフォーム</a>
+      <a href="howto.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">参加方法</a>
+      <a href="photos.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">フォトスポット</a>
+      <a href="guides.html" class="font-medium text-white shadow-neon-blue transition-all duration-300 hover-float">始め方ガイド</a>
+      <a href="contact.html" class="text-cyber-teal hover:text-white hover:shadow-neon-teal transition-all duration-300 hover-float">お問い合わせ</a>
     </div>
   </nav>
 
   <!-- 📚 GUIDES -->
   <section class="py-16">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-4xl font-bold mb-8 text-center">メタバースプラットフォームの始め方＋α</h1>
-      <p class="text-lg text-center mb-12 max-w-3xl mx-auto">
+    <div class="max-w-4xl mx-auto px-6 relative">
+      <div class="absolute inset-0 bg-cyber-blue opacity-5 rounded-3xl blur-3xl -z-10"></div>
+      <h1 class="text-4xl font-bold mb-8 text-center text-white text-glow">メタバースプラットフォームの始め方＋α</h1>
+      <p class="text-lg text-center mb-12 max-w-3xl mx-auto text-cyber-teal">
         各メタバースプラットフォームの始め方を解説します。<br>
         初めての方でも安心してメタ忍ワールドに参加できるよう、詳しい手順をご紹介します。
       </p>
 
       <!-- SANDBOX -->
-      <div class="mb-16 bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="bg-indigo-600 text-white p-6">
-          <h2 class="text-2xl font-bold">Sandbox（サンドボックス）の始め方</h2>
+      <div class="mb-16 bg-cyber-dark bg-opacity-70 backdrop-blur-md rounded-lg border border-cyber-blue shadow-neon-blue overflow-hidden card-3d">
+        <div class="bg-gradient-to-r from-cyber-blue to-cyber-purple text-white p-6">
+          <h2 class="text-2xl font-bold text-glow">Sandbox（サンドボックス）の始め方</h2>
           <p class="mt-2 opacity-90">CNP Land、NOAランド、クリプトニンジャ咲耶ワールドで利用</p>
         </div>
         <div class="p-6">
-          <div class="prose max-w-none">
+          <div class="prose max-w-none text-gray-300">
             <p>Sandboxはブロックチェーン技術を活用した3Dメタバースプラットフォームです。以下の手順で始めることができます：</p>
             <ol class="list-decimal pl-5 space-y-3 mt-4">
               <li><strong>アカウント作成</strong>：公式サイトにアクセスし、メールアドレスで登録またはウォレット連携で登録</li>
@@ -45,7 +94,7 @@
               <li><strong>ワールドへのアクセス</strong>：EXPERIENCESタブから目的のワールドを検索して入場</li>
             </ol>
             <p class="mt-6">詳しい始め方は以下の公式ガイドをご覧ください：</p>
-            <a href="https://omochi-bigaku.com/how-to-start-sandbox/" target="_blank" rel="noopener" class="inline-block mt-2 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md transition">
+            <a href="https://omochi-bigaku.com/how-to-start-sandbox/" target="_blank" rel="noopener" class="inline-block mt-2 px-6 py-2 bg-cyber-blue hover:bg-opacity-80 text-white font-medium rounded-md transition-all duration-300 shadow-neon-blue hover-float">
               Sandboxの詳細ガイドを見る →
             </a>
           </div>
@@ -53,13 +102,13 @@
       </div>
 
       <!-- RIUM -->
-      <div class="mb-16 bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="bg-purple-600 text-white p-6">
-          <h2 class="text-2xl font-bold">Rium（リアム）の始め方</h2>
+      <div class="mb-16 bg-cyber-dark bg-opacity-70 backdrop-blur-md rounded-lg border border-cyber-purple shadow-neon-purple overflow-hidden card-3d">
+        <div class="bg-gradient-to-r from-cyber-purple to-cyber-pink text-white p-6">
+          <h2 class="text-2xl font-bold text-glow">Rium（リアム）の始め方</h2>
           <p class="mt-2 opacity-90">クリプトニンジャ・オンライン、甲賀シティで利用</p>
         </div>
         <div class="p-6">
-          <div class="prose max-w-none">
+          <div class="prose max-w-none text-gray-300">
             <p>Riumは日本発のメタバースプラットフォームで、ブラウザから簡単にアクセスできます：</p>
             <ol class="list-decimal pl-5 space-y-3 mt-4">
               <li><strong>アカウント登録</strong>：公式サイトでメールアドレスまたはSNSアカウントで登録</li>
@@ -68,7 +117,7 @@
               <li><strong>操作方法</strong>：WASDキーで移動、マウスで視点操作</li>
             </ol>
             <p class="mt-6">詳しい始め方は以下のガイドをご覧ください：</p>
-            <a href="https://stella-international.co.jp/media/rium/" target="_blank" rel="noopener" class="inline-block mt-2 px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition">
+            <a href="https://stella-international.co.jp/media/rium/" target="_blank" rel="noopener" class="inline-block mt-2 px-6 py-2 bg-cyber-purple hover:bg-opacity-80 text-white font-medium rounded-md transition-all duration-300 shadow-neon-purple hover-float">
               Riumの詳細ガイドを見る →
             </a>
           </div>
@@ -76,13 +125,13 @@
       </div>
 
       <!-- CLUSTER -->
-      <div class="mb-16 bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="bg-blue-600 text-white p-6">
-          <h2 class="text-2xl font-bold">Cluster（クラスター）の始め方</h2>
+      <div class="mb-16 bg-cyber-dark bg-opacity-70 backdrop-blur-md rounded-lg border border-cyber-blue shadow-neon-blue overflow-hidden card-3d">
+        <div class="bg-gradient-to-r from-cyber-teal to-cyber-blue text-white p-6">
+          <h2 class="text-2xl font-bold text-glow">Cluster（クラスター）の始め方</h2>
           <p class="mt-2 opacity-90">ニンジャ寺子屋で利用</p>
         </div>
         <div class="p-6">
-          <div class="prose max-w-none">
+          <div class="prose max-w-none text-gray-300">
             <p>Clusterは日本発のVRメタバースプラットフォームで、PCやスマートフォンから利用できます：</p>
             <ol class="list-decimal pl-5 space-y-3 mt-4">
               <li><strong>アカウント作成</strong>：公式サイトまたはアプリでアカウントを作成</li>
@@ -91,7 +140,7 @@
               <li><strong>ワールドへのアクセス</strong>：ワールドURLまたはIDから直接アクセス</li>
             </ol>
             <p class="mt-6">詳しい始め方は以下のガイドをご覧ください：</p>
-            <a href="https://xrcloud.jp/blog/articles/business/10206/" target="_blank" rel="noopener" class="inline-block mt-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition">
+            <a href="https://xrcloud.jp/blog/articles/business/10206/" target="_blank" rel="noopener" class="inline-block mt-2 px-6 py-2 bg-cyber-blue hover:bg-opacity-80 text-white font-medium rounded-md transition-all duration-300 shadow-neon-blue hover-float">
               Clusterの詳細ガイドを見る →
             </a>
           </div>
@@ -99,13 +148,13 @@
       </div>
 
       <!-- SPATIAL -->
-      <div class="mb-16 bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="bg-teal-600 text-white p-6">
-          <h2 class="text-2xl font-bold">Spatial（スペーシャル）の始め方</h2>
+      <div class="mb-16 bg-cyber-dark bg-opacity-70 backdrop-blur-md rounded-lg border border-cyber-teal shadow-neon-teal overflow-hidden card-3d">
+        <div class="bg-gradient-to-r from-cyber-teal to-cyber-blue text-white p-6">
+          <h2 class="text-2xl font-bold text-glow">Spatial（スペーシャル）の始め方</h2>
           <p class="mt-2 opacity-90">咲耶ポータルで利用</p>
         </div>
         <div class="p-6">
-          <div class="prose max-w-none">
+          <div class="prose max-w-none text-gray-300">
             <p>Spatialはブラウザベースのメタバースプラットフォームで、アートやNFTの展示に適しています：</p>
             <ol class="list-decimal pl-5 space-y-3 mt-4">
               <li><strong>アカウント作成</strong>：公式サイトでGoogleアカウントまたはメールアドレスで登録</li>
@@ -114,7 +163,7 @@
               <li><strong>ワールドへのアクセス</strong>：共有されたURLから直接スペースにアクセス</li>
             </ol>
             <p class="mt-6">詳しい始め方は以下のガイドをご覧ください：</p>
-            <a href="https://taziku.co.jp/blog/spatial01" target="_blank" rel="noopener" class="inline-block mt-2 px-6 py-2 bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-md transition">
+            <a href="https://taziku.co.jp/blog/spatial01" target="_blank" rel="noopener" class="inline-block mt-2 px-6 py-2 bg-cyber-teal hover:bg-opacity-80 text-white font-medium rounded-md transition-all duration-300 shadow-neon-teal hover-float">
               Spatialの詳細ガイドを見る →
             </a>
           </div>
@@ -122,14 +171,14 @@
       </div>
 
       <!-- FiNANCiE Guide -->
-      <div class="mb-16 bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="bg-red-600 text-white p-6">
-          <h2 class="text-2xl font-bold">FiNANCiE（フィナンシェ）の始め方</h2>
+      <div class="mb-16 bg-cyber-dark bg-opacity-70 backdrop-blur-md rounded-lg border border-cyber-pink shadow-neon-pink overflow-hidden card-3d">
+        <div class="bg-gradient-to-r from-cyber-pink to-cyber-purple text-white p-6">
+          <h2 class="text-2xl font-bold text-glow">FiNANCiE（フィナンシェ）の始め方</h2>
           <p class="mt-2 opacity-90">CNGトークンを受け取る時に必要です</p>
         </div>
         <div class="p-6">
-          <p class="leading-relaxed">FiNANCiEはトークン発行・コミュニティ運営サービスです。下記公式Noteで口座開設からトークン受取までを解説しています。</p>
-          <a href="https://note.com/financie/n/nd36628921c93" target="_blank" rel="noopener" class="inline-block mt-4 px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-md transition">
+          <p class="leading-relaxed text-gray-300">FiNANCiEはトークン発行・コミュニティ運営サービスです。下記公式Noteで口座開設からトークン受取までを解説しています。</p>
+          <a href="https://note.com/financie/n/nd36628921c93" target="_blank" rel="noopener" class="inline-block mt-4 px-6 py-2 bg-cyber-pink hover:bg-opacity-80 text-white font-medium rounded-md transition-all duration-300 shadow-neon-pink hover-float">
             公式ガイドを読む →
           </a>
         </div>
@@ -138,14 +187,14 @@
   </section>
 
   <!-- 👣 FOOTER -->
-  <footer class="bg-slate-900 text-slate-300 py-8 text-center text-sm">
+  <footer class="bg-cyber-dark border-t border-cyber-teal text-cyber-teal py-8 text-center text-sm">
     <nav class="mb-4">
-      <a href="index.html" class="mx-3 hover:underline">トップ</a>
-      <a href="platforms.html" class="mx-3 hover:underline">プラットフォーム</a>
-      <a href="howto.html" class="mx-3 hover:underline">参加方法</a>
-      <a href="photos.html" class="mx-3 hover:underline">フォトスポット</a>
-      <a href="guides.html" class="mx-3 hover:underline">始め方ガイド</a>
-      <a href="contact.html" class="mx-3 hover:underline">お問い合わせ</a>
+      <a href="index.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">トップ</a>
+      <a href="platforms.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">プラットフォーム</a>
+      <a href="howto.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">参加方法</a>
+      <a href="photos.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">フォトスポット</a>
+      <a href="guides.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">始め方ガイド</a>
+      <a href="contact.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">お問い合わせ</a>
     </nav>
     &copy; 2025 NinjaDAO / MetaNinja World Project
   </footer>
