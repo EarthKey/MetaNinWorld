@@ -99,6 +99,8 @@
           メタ忍7ワールド
         </a>
       </div>
+      <!-- ⏳ COUNTDOWN TIMER -->
+      <div id="countdown" class="mt-8 text-4xl md:text-6xl font-extrabold text-cyber-pink"></div>
     </div>
   </header>
 
@@ -161,5 +163,40 @@
       <a href="contact.html" class="mx-3 hover:text-white hover:shadow-neon-teal transition-all duration-300">参加上の注意事項</a>
     </nav>
   </footer>
+  <!-- ⏳ COUNTDOWN SCRIPT -->
+  <script>
+    (function () {
+      // 終了日時（JST）
+      const endDate = new Date('2025-07-18T23:59:00+09:00');
+
+      const pad = (n) => n.toString().padStart(2, '0');
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = endDate - now;
+
+        const countdownEl = document.getElementById('countdown');
+        if (!countdownEl) return; // safety guard
+
+        if (diff <= 0) {
+          countdownEl.textContent = '開催は終了しました';
+          clearInterval(timerId);
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        countdownEl.textContent =
+          `終了まで ${days}日 ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+      }
+
+      // 初期化 & 1 秒ごとに更新
+      updateCountdown();
+      const timerId = setInterval(updateCountdown, 1000);
+    })();
+  </script>
 </body>
 </html>
