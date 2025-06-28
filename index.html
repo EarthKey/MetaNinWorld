@@ -100,7 +100,7 @@
         </a>
       </div>
       <!-- ⏳ COUNTDOWN TIMER -->
-      <div id="countdown" class="mt-8 text-4xl md:text-6xl font-extrabold text-cyber-pink"></div>
+      <div id="countdown" class="mt-8 inline-block px-6 py-4 text-4xl md:text-6xl font-extrabold bg-white text-black border-4 border-black rounded-lg shadow-lg"></div>
     </div>
   </header>
 
@@ -189,8 +189,25 @@
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
 
-        countdownEl.textContent =
-          `終了まで ${days}日 ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+        // 初回実行時に要素を作成
+        if (!countdownEl.querySelector('.end-text')) {
+          countdownEl.textContent = '';
+          
+          const endText = document.createElement('span');
+          endText.className = 'end-text text-cyber-pink font-bold';
+          endText.style.textShadow = '0 0 5px #F72585';
+          endText.textContent = '終了まで ';
+          
+          const timeText = document.createElement('span');
+          timeText.className = 'time-text';
+          
+          countdownEl.appendChild(endText);
+          countdownEl.appendChild(timeText);
+        }
+        
+        // 時間部分だけを更新
+        const timeText = countdownEl.querySelector('.time-text');
+        timeText.textContent = `${days}日 ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
       }
 
       // 初期化 & 1 秒ごとに更新
