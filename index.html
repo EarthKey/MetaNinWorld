@@ -189,8 +189,24 @@
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
 
-        countdownEl.textContent =
-          `終了まで ${days}日 ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+        // 初回実行時に要素を作成
+        if (!countdownEl.querySelector('.end-text')) {
+          countdownEl.textContent = '';
+          
+          const endText = document.createElement('span');
+          endText.className = 'end-text text-cyber-purple font-bold';
+          endText.textContent = '終了まで ';
+          
+          const timeText = document.createElement('span');
+          timeText.className = 'time-text';
+          
+          countdownEl.appendChild(endText);
+          countdownEl.appendChild(timeText);
+        }
+        
+        // 時間部分だけを更新
+        const timeText = countdownEl.querySelector('.time-text');
+        timeText.textContent = `${days}日 ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
       }
 
       // 初期化 & 1 秒ごとに更新
